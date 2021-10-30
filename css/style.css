@@ -1,0 +1,632 @@
+body {
+    font-family: 'Merriweather', serif;
+    color: #3a3a3a;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/Fondo.jpg");
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.3em;
+}
+
+p {
+    margin-bottom: 1.6em;
+}
+
+.mainContainer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Cabecera*/
+
+header {
+    background: rgba(0, 0, 0, .6);
+    color: #f3f3f3;
+    padding: 3rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /*Prioridad para el elemento y sus elementos hijos*/
+}
+
+header a {
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+/*Barra de Navegación*/
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navBrand {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.navBrand:hover {
+    color: rgb(0, 180, 180);
+}
+
+.navBrand img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+}
+
+.navBrand span {
+    letter-spacing: 15px;
+    font-size: 1.3em;
+    padding-left: 1rem;
+}
+
+.navContainer button {
+    display: none;
+}
+
+.navList ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navList ul li {
+    display: inline-block;
+}
+
+.navList ul li a {
+    display: block;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s linear;
+    border-radius: 6px;
+}
+
+.navList ul li a:hover {
+    color: rgb(0, 180, 180);
+    background-color: #f3f3f3;
+}
+
+.navList ul li a:link {
+    color: rgb(150, 150, 150);
+}
+
+.navList ul li a:active {
+    color: rgb(196, 173, 47);
+}
+
+.navItem-separation {
+    display: none;
+}
+
+.navItem a svg {
+    height: 1rem;
+}
+
+/*Contenido Principal*/
+
+main {
+    padding-top: 12rem; 
+}
+
+section {
+    padding-top: 3rem;
+}
+
+.secContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.secContainer iframe {
+    width: 100%;
+    height: 600px;
+    border: 6px solid rgba(255, 255, 255, .9);
+    border-radius: 9px;
+}
+
+.secContainer-welcome {
+    background-color: rgba(0, 0, 0, .3);
+    color: #f3f3f3;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 45px;
+    border-radius: 9px;
+}
+
+.secMainContainer-link {
+    padding-top: 30px;
+}
+
+.secContainer-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3a3a3a;
+    color: rgba(255, 255, 255, .9);
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+    border: 6px solid rgba(255, 255, 255, .9);
+    border-radius: 9px;
+    transition: all 0.3s ease;
+}
+
+.secContainer-link:hover {
+    color: rgb(0, 180, 180);
+    box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+}
+
+.secContainer-content {
+    background-color: #f3f3f363;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 45px;
+    border-radius: 9px;
+}
+
+.secContainer-content h2 {
+    line-height: 3em;
+}
+
+.secContainer-content img {
+    margin-top: 3rem;
+    border: 6px solid #f3f3f3;
+    border-radius: 9px;
+}
+
+/* Formulario de validación */
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.formLabel {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formGroup-input {
+    position: relative;
+}
+
+.formInput {
+    background: #f3f3f3;
+    width: 87%;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+}
+
+.formInput:focus {
+    border: 3px solid #63ccca;
+    outline: none;
+    box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+}
+
+.formInput-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formInput-error-activate {
+    display: block;
+}
+
+.formCheckbox {
+    margin-right: 15px;
+}
+
+.formTerms-group,
+.formMessage,
+.formGroupButton-send {
+    grid-column: span 2;
+}
+
+.formMessage {
+    background: #cc3939;
+    color: #f3f3f3;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formMessage-activate {
+    display: block;
+}
+
+.formMessage p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.formGroupButton-send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formButton {
+    background-color: #3a3a3a;
+    color: rgba(255, 255, 255, .9);
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formButton:hover {
+    box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+}
+
+.formSuccessMessage {
+    font-size: 12px;
+    color: rgba(0, 180, 180, 0.9);
+    display: none;
+}
+
+.formSuccessMessage-activate {
+    display: block;
+}
+
+/* Estilos para validación */
+
+.formGroup-correct {
+    color: rgba(0, 180, 180, 0.9);
+    opacity: 1;
+}
+
+.formGroup-void .formLabel {
+    color:#3a3a3a
+}
+
+.formGroup-incorrect .formLabel {
+    color: #cc3939;
+}
+
+.formGroup-incorrect .formInput {
+    border: 3px solid #cc3939;
+}
+
+/**/
+
+.secContainer-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background: #3a3a3a;
+    margin-bottom: 3em;
+    width: 33%;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+}
+
+.card a {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+.card a:hover {
+    color: rgb(0, 180, 180);
+}
+
+.cardContent {
+    padding: 1.3em;
+}
+
+.cardContent h2 {
+    margin-top: 0;
+    margin-bottom: .6em;
+    font-weight: normal;
+}
+
+.cardContent p {
+    font-size: 96%;
+}
+
+.card a figure {
+    margin: 0;
+}
+
+.card a figure img {
+    display: block;
+    border: 0;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    width: 100%;
+    height: auto;
+}
+
+.secContainer button {
+    background-color: #3a3a3a;
+    color: rgba(255, 255, 255, .9);
+    width: 150px;
+    height: 150px;
+    font-size: 90px;
+    border: 6px solid #f3f3f3;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secContainer button:hover {
+    color: rgb(0, 180, 180);
+    box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+}
+
+/*Pie de Página*/
+
+footer {
+    background: #f3f3f3;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+footer a {
+    color: #3a3a3a;
+    text-decoration: none;
+}
+
+.fooContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fooContainer ul {
+    list-style: none;
+}
+
+.fooBrand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+.fooBrand:hover {
+    color: rgb(255, 255, 255);
+}
+
+.fooBrand img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+}
+
+.fooBrand span {
+    letter-spacing: 15px;
+    font-size: 1.3em;
+    padding-left: 1rem;
+}
+
+.pContainer a {
+    transition: all 0.3s linear;
+}
+
+.pContainer a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.fooList h5 {
+    letter-spacing: 15px;
+    font-size: 1.3em;
+    padding-left: 1rem;
+}
+
+.fooList ul {
+    margin: 0;
+    padding: 0;
+}
+
+.fooList ul li {
+    display: inline-block;
+}
+
+.fooList ul li a {
+    display: block;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s linear;
+    border-radius: 6px;
+}
+
+.fooList ul li a:hover {
+    color: #f3f3f3;
+    background-color: #3a3a3a;
+}
+
+.fooList ul li a:link {
+    color: rgb(168, 168, 168);
+}
+
+.fooList ul li a:active {
+    color: rgb(196, 173, 47);
+}
+
+.fooItem-separation {
+    display: none;
+}
+
+.fooItem a svg {
+    height: 1rem;
+}
+
+@media all and (min-width: 600px) and (max-width: 1043px) {
+
+    /*Barra de Navegación*/
+
+    .navContainer button {
+        display: block;
+        cursor: pointer;
+        background-color: #3a3a3a;
+        color: rgba(255, 255, 255, .9);
+        width: 6rem;
+        font-size: 1.9rem;
+        padding: 0.6rem 1rem;
+        border: 6px solid rgba(255, 255, 255, .9);
+        border-radius: 9px;
+        transition: all 0.3s ease;
+    }
+
+    .navContainer button:hover {
+        color: rgb(0, 180, 180);
+        box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+    }
+
+    .navList {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navList ul {
+        display: none;
+    }
+
+    .navList ul.navbarNav {
+        display: block;
+    }
+    
+    .navList ul li {
+        display: block;
+    }
+
+    .navItem-separation {
+        display: block;
+    }
+
+    /* Formulario de validación */
+
+    .formInput {
+        width: 75%;
+    }
+}
+
+@media all and (max-width: 599px) {
+
+    /*Barra de Navegación*/
+    
+    .navContainer button {
+        display: block;
+        cursor: pointer;
+        background-color: #3a3a3a;
+        color: rgba(255, 255, 255, .9);
+        width: 6rem;
+        font-size: 1.9rem;
+        padding: 0.6rem 1rem;
+        border: 6px solid rgba(255, 255, 255, .9);
+        border-radius: 9px;
+        transition: all 0.3s ease;
+    }
+
+    .navContainer button:hover {
+        color: rgb(0, 180, 180);
+        box-shadow: 3px 3px 45px rgba(0, 180, 180, 0.9);
+    }
+
+    .navBrand span {
+        display: none;
+    }
+
+    .navList {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navList ul {
+        display: none;
+    }
+
+    .navList ul.navbarNav {
+        display: block;
+    }
+    
+    .navList ul li {
+        display: block;
+    }
+
+    .navItem-separation {
+        display: block;
+    }
+        
+    /*Contenido Principal*/
+
+    .secContainer-card {
+        display: block;
+    }
+
+    .card {
+        background: #3a3a3a;
+        margin-bottom: 3em;
+        width: 100%;
+        border-radius: 9px;
+    }
+
+    /* Formulario de validación */
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .formInput {
+        width: 81%;
+    }
+
+    .formTerms-group,
+    .formMessage,
+    .formGroupButton-send {
+        grid-column: 1;
+    }
+
+    /*Pie de Página*/
+
+    .fooBrand span {
+        display: none;
+    }
+
+    .fooList ul li {
+        display: block;
+    }
+
+    .fooItem-separation {
+        display: block;
+    }
+}
